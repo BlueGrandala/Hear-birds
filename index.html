@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hear birds!</title>
+    <style>
+        /* 一些简单的样式让它好看一点 */
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #f0f2f5; }
+        .player-container { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+        audio { width: 100%; max-width: 400px; margin-top: 1rem; }
+        h1 { font-size: 1.5rem; color: #333; margin-bottom: 0.5rem; }
+        p { color: #666; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="player-container">
+        <h1>灰头绿啄木鸟 Picus canus</h1>
+        <p>录音来自 xeno-canto.org</p>
+        <!-- 重点在这里：controls 属性显示播放控件 -->
+        <!-- autoplay 属性（如需要）可以让音频自动播放，但很多浏览器会禁止带声音的自动播放 -->
+        <audio controls preload="metadata">
+            <!-- 这里的 src 指向您同目录下的音频文件 -->
+            <source src="https://cdn.download.ams.birds.cornell.edu/api/v2/asset/38319731/mp3" type="audio/mpeg">
+            您的浏览器不支持 audio 元素。
+        </audio>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">
+            <a href="my-audio-file.mp3" download>点击此处下载音频文件</a>
+        </p>
+    </div>
+</body>
+</html>
